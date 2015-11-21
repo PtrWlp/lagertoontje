@@ -4,22 +4,33 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         assemble: {
             options: {
-                layout: "src/layouts/default.hbs",
                 partials: ['src/partials/*.hbs'],
                 flatten: true
             },
-            pages: {
+            main: {
+                options: {
+                  layout: "src/layouts/index.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'web/index.html'
+            },
+            articles: {
+                options: {
+                  layout: "src/layouts/article.hbs"
+                },
+                src: ['src/articles/*.hbs'],
                 files: {
-                    'web/': ['src/pages/**/*.hbs']
-                }
+                    'web/': ['src/articles/**/*.hbs']
+                },
+                dest: 'web/'
             }
         },
         clean: {
-            all: ['web/*.*']
+            all: ['web/**/*.*']
         },
         copy: {
             favicon: {
-                expand : true,
+                expand : false,
                 src : 'src/favicon.ico',
                 dest : 'web/favicon.ico'
             },
@@ -59,7 +70,7 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'web/js'
             }
-        } 
+        }
 
     });
     grunt.loadNpmTasks('assemble');
