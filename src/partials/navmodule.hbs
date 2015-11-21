@@ -1,0 +1,20 @@
+<li class="g-docs-navitem">
+    <a tabindex="-1" class="g-docs-navlink {{#is this.isCurrentPage true}}g-docs-navactive{{/is}}"
+        href="{{relativeLink}}">
+            {{#is type "beta"}}
+                <span title="beta" class="g-docs-badge g-docs-badge-beta">beta</span>
+            {{/is}}
+            {{#is type "deprecated"}}
+                <span title="deprecated" class="g-docs-badge g-docs-badge-deprecated">depr</span>
+            {{/is}}
+            {{getComponent src}}
+
+    </a>
+    {{#if subs.length}}
+    <ul class="g-docs-navsubs">
+    {{#each subs}}
+        {{> navmodule}}
+    {{/each}}
+    </ul>
+    {{/if}}
+</li>
