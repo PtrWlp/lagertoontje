@@ -21,6 +21,10 @@ legend {
   font-size: 11px;
 }
 
+blockquote {
+  font-size: 15px;
+}
+
 .panel-heading h4 {
   font-size: 15px;
 }
