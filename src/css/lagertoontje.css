@@ -25,11 +25,24 @@ blockquote {
   font-size: 15px;
 }
 
-.panel-heading h4 {
-  font-size: 15px;
+#tl-accordion {
+  border-top: 1px solid black;
 }
-.panel-heading a {
-  text-decoration: none;
+
+#tl-accordion > h2, 
+#tl-accordion > div {
+  border-style: solid;
+  border-color: black;
+  border-left: 1px; 
+  border-right: 1px; 
+  border-bottom: 1px; 
+  padding: 5px;
+}
+
+#tl-accordion > h2 {
+  font-size: 16px;
+  line-height: 2;
+  background-color: #eee;
 }
 
 .chevron::before {
@@ -59,7 +72,6 @@ blockquote {
   left: 0.25em;
   transform: rotate(-135deg);
 }
-
 
 
 /*

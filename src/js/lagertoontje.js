@@ -1,17 +1,15 @@
+var $allPanels = $('#tl-accordion > div').hide();
+var $allSections = $('#tl-accordion > h2');
+var $activeSection = $(location.hash);
+if ($activeSection.length !== 0) {
+	$activeSection.next().slideDown()
+}
 
-$('#collapse1').on('shown.bs.collapse', function() {
-    $("#collapse1Chevron").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
-  });
+$('#tl-accordion > h2').click(function() {
+	$allPanels.slideUp();
+	$(this).next().slideDown();
+	// More things to do
 
-$('#collapse1').on('hidden.bs.collapse', function() {
-    $("#collapse1Chevron").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
-  });
 
-$('#collapse2').on('shown.bs.collapse', function() {
-    $("#collapse2Chevron").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
-  });
-
-$('#collapse2').on('hidden.bs.collapse', function() {
-    $("#collapse2Chevron").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
-  });
-
+	return false;
+});
