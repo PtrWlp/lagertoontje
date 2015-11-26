@@ -43,34 +43,25 @@ blockquote {
   font-size: 16px;
   line-height: 2;
   background-color: #ddd;
+  padding-left: 20px;
 }
 
-.chevron::before {
+#tl-accordion > h2::before {
   border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
+  border-width: 4px 4px 0 0;
   content: '';
   display: inline-block;
-  height: 0.45em;
-  left: 0.15em;
   position: relative;
-  top: 0.15em;
-  transform: rotate(-45deg);
-  vertical-align: top;
-  width: 0.45em;
-}
-.chevron.right:before {
-  left: 0;
+  height: 10px;
+  width: 10px;
+  left: -10px;
+  top: 10px;
   transform: rotate(45deg);
+  vertical-align: top;
 }
-
-.chevron.bottom:before {
-  top: 0;
+#tl-accordion > h2.tl-open:before {
   transform: rotate(135deg);
-}
-
-.chevron.left:before {
-  left: 0.25em;
-  transform: rotate(-135deg);
+  transition: 0.5s ease-in-out;
 }
 
 
@@ -169,19 +160,6 @@ blockquote {
 }
 
 
-/* Pagination */
-.pager {
-  margin-bottom: 60px;
-  text-align: left;
-}
-.pager > li > a {
-  width: 140px;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 30px;
-}
-
-
 /*
  * Blog posts
  */
@@ -204,11 +182,12 @@ blockquote {
  */
 
 .blog-footer {
-  padding: 40px 0;
+  margin-top: 10px;
+  padding-top: 10px;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
