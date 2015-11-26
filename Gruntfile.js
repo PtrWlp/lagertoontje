@@ -70,12 +70,67 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'web/js'
             }
-        }
+        }, 
+		watch: {
+			options: {
+				livereload: true,
+			},
+			css: {
+				files: ['src/css/*.css'],
+				tasks: ['copy:css']
+			},
+			js: {
+				files: ['src/js/lagertoontje.js'],
+				tasks: ['copy:js'],
+				options: {
+					 nospawn: true
+				}
+			},
+			html: {
+				files: ['src/articles/*.hbs',
+						'src/layouts/*.hbs',
+						'src/partials/*.hbs'],
+				tasks: ['assemble']
+			}
+		},
+		connect: {
+			lagertoontje: {
+                options: {
+                    hostname: 'localhost',
+                    port: 80,
+                    base: './',
+                    open: 'http://localhost:80/web/index.html',
+                    middleware: function (connect, options) {
+                        // bug in connect 0.7+ , https://github.com/drewzboto/grunt-connect-proxy/issues/65
+                        options.base = options.base[0];
+                        var config = [];
+                        // RewriteRules support
+                        config.push(require('grunt-connect-rewrite/lib/utils').rewriteRequest);
+                        if (!Array.isArray(options.base)) {
+                            options.base = [options.base];
+                        }
+                        var directory = options.directory || options.base[options.base.length - 1];
+                        options.base.forEach(function (base) {
+                            // Serve static files.
+                            config.push(connect.static(base));
+                        });
+                        // Make directory browse-able.
+                        config.push(connect.directory(directory));
 
+                        return config;
+
+                    }
+                }
+            }
+        }
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['clean', 'assemble', 'copy']);
+    grunt.registerTask('server', ['clean', 'assemble', 'copy', 'watch']);
 };
