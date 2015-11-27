@@ -14,6 +14,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'web/index.html'
             },
+            about: {
+                options: {
+                  layout: "src/layouts/about.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'web/about.html'
+            },
             articles: {
                 options: {
                   layout: "src/layouts/article.hbs"
@@ -39,6 +46,12 @@ module.exports = function(grunt) {
                 cwd : 'src/css',
                 src : '**',
                 dest : 'web/css'
+            },
+            assets: {
+                expand : true,
+                cwd : 'assets',
+                src : '**',
+                dest : 'web/assets'
             },
             font: {
                 expand : true,
@@ -73,7 +86,7 @@ module.exports = function(grunt) {
         }, 
 		watch: {
 			options: {
-				livereload: true,
+				livereload: false,
 			},
 			css: {
 				files: ['src/css/*.css'],
@@ -100,5 +113,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['clean', 'assemble', 'copy']);
-    grunt.registerTask('server', ['clean', 'assemble', 'copy', 'watch']);
+    grunt.registerTask('update', ['clean', 'assemble', 'copy', 'watch']);
 };
