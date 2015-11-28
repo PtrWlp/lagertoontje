@@ -21,6 +21,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'web/about.html'
             },
+            pers: {
+                options: {
+                  layout: "src/layouts/pers.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'web/pers.html'
+            },
             articles: {
                 options: {
                   layout: "src/layouts/article.hbs"

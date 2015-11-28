@@ -25,6 +25,16 @@ blockquote {
   font-size: 15px;
 }
 
+.tl-navheader {
+  color: #cdddeb;
+  padding: 5px 0 5px 10px;
+  font-size: 16px;
+}
+
+hr.tl-headline {
+  margin: 0;
+}
+
 #tl-accordion {
   border-top: 1px solid black;
 }
@@ -125,11 +135,11 @@ blockquote {
   padding-bottom: 20px;
 }
 .blog-title {
-  font-size: 60px;
+  font-size: 22px;
   font-weight: normal;
 }
 .blog-description {
-  font-size: 20px;
+  font-size: 18px;
   color: #999;
 }
 
