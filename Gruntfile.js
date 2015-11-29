@@ -12,21 +12,21 @@ module.exports = function(grunt) {
                   layout: "src/layouts/index.hbs"
                 },
                 src: ['src/partials/main.hbs'],
-                dest: 'web/index.html'
+                dest: 'target/index.html'
             },
             about: {
                 options: {
                   layout: "src/layouts/about.hbs"
                 },
                 src: ['src/partials/main.hbs'],
-                dest: 'web/about.html'
+                dest: 'target/about.html'
             },
             pers: {
                 options: {
                   layout: "src/layouts/pers.hbs"
                 },
                 src: ['src/partials/main.hbs'],
-                dest: 'web/pers.html'
+                dest: 'target/pers.html'
             },
             articles: {
                 options: {
@@ -34,61 +34,66 @@ module.exports = function(grunt) {
                 },
                 src: ['src/articles/*.hbs'],
                 files: {
-                    'web/': ['src/articles/**/*.hbs']
+                    'target/': ['src/articles/**/*.hbs']
                 },
-                dest: 'web/'
+                dest: 'target/'
             }
         },
         clean: {
-            all: ['web/**/*.*']
+            all: ['target/**/*.*']
         },
         copy: {
             favicon: {
                 expand : false,
                 src : 'src/favicon.ico',
-                dest : 'web/favicon.ico'
+                dest : 'target/favicon.ico'
+            },
+            googleverify: {
+                expand : false,
+                src : 'src/google8ffff2c5aa03806c.html',
+                dest : 'target/google8ffff2c5aa03806c.html'
             },
             css: {
                 expand : true,
                 cwd : 'src/css',
                 src : '**',
-                dest : 'web/css'
+                dest : 'target/css'
             },
             assets: {
                 expand : true,
                 cwd : 'assets',
                 src : '**',
-                dest : 'web/assets'
+                dest : 'target/assets'
             },
             font: {
                 expand : true,
                 cwd : 'src/fonts',
                 src : '**',
-                dest : 'web/fonts'
+                dest : 'target/fonts'
             },
             audio: {
                 expand : true,
                 cwd : 'src/audio',
                 src : '**',
-                dest : 'web/audio'
+                dest : 'target/audio'
             },
             img: {
                 expand : true,
                 cwd : 'src/img',
                 src : '**',
-                dest : 'web/img'
+                dest : 'target/img'
             },
             docs: {
                 expand : true,
                 cwd : 'src/docs',
                 src : '**',
-                dest : 'web/docs'
+                dest : 'target/docs'
             },
             js: {
                 expand : true,
                 cwd : 'src/js',
                 src : '**',
-                dest : 'web/js'
+                dest : 'target/js'
             }
         }, 
 		watch: {
