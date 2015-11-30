@@ -24,4 +24,26 @@ $('#tl-accordion > h2').click(function() {
 	return false;
 });
 
+// Handle voting buttons
+$('.tl-factor button').on("click", function () {
+	var cookiename = 'tl-' + $(this).data('factor');
+	if ($(this).data('agree')) {
+		Cookies.set(cookiename, true);
+	} else {
+		Cookies.remove(cookiename);	
+	}
+});
+
+
+// Set voting when you encounter one
+function setFactorVote(el) {
+	var $el=$(el);
+	var factor = $el.data('factor');
+	if (Cookies.get('tl-' + factor)) {
+		$el.addClass('checked');
+	} else {
+		$el.removeClass('checked');
+	}
+}
+
 

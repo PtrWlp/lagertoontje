@@ -74,17 +74,11 @@ hr.tl-headline {
   transition: 0.5s ease-in-out;
 }
 
-
-/*
- * Override Bootstrap's default container.
- */
-
 @media (min-width: 1200px) {
   .container {
     width: 970px;
   }
 }
-
 
 
 .tl-masthead {
@@ -204,59 +198,21 @@ hr.tl-headline {
 }
 
 
-[class*=icono-], [class*=icono-] * {
+.tl-factor {
+  background-color: #EEE;
+  margin: 15px;
+  padding: 10px;
+  border: solid 1px  #3b5998;
+  border-radius: 5px;
+}
+
+
+.tl-checkmark {
     box-sizing: border-box;
-}
-[class*=icono-] {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    font-style: normal;
-    color: #F00;
-    text-align: left;
-    text-indent: -9999px;
-    direction: ltr;
-}
-.icono-cross, .icono-crossCircle {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-[class*=icono-cross], [class*=icono-plus] {
-    width: 30px;
-    height: 30px;
-    margin: 2px;
-}
-
-[class*=icono-]:after, [class*=icono-]:before {
-    content: '';
-    pointer-events: none;
-}
-[class*=icono-check]:before, [class*=icono-cross]:before, [class*=icono-plus]:before {
-    width: 20px;
-    height: 2px;
-}
-[class*=icono-cross]:after, [class*=icono-plus]:after {
-    height: 20px;
-    width: 2px;
-}
-[class*=icono-check]:before, [class*=icono-cross]:after, [class*=icono-cross]:before {
-    box-shadow: inset 0 0 0 32px;
-}
-[class*=icono-check]:before, [class*=icono-cross]:after, [class*=icono-cross]:before {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-
-
-.tl-checkmark, .tl-checkmark * {
-    box-sizing: border-box;
+    transition: all 2s;
 }
 .tl-checkmark {
+    transition: all 1s ease;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -274,26 +230,43 @@ hr.tl-headline {
 }
 
 .tl-checkmark:after, .tl-checkmark:before {
+    transition: all 1s ease;
     content: '';
     pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    box-shadow: inset 0 0 0 32px;
 }
 
 .tl-checkmark:before {
     width: 20px;
-    height: 2px;
+    height: 3px;
 }
 .tl-checkmark:after {
     height: 20px;
-    width: 2px;
+    width: 3px;
 }
-.tl-checkmark:after, .tl-checkmark:before {
-    box-shadow: inset 0 0 0 32px;
+
+.checked.tl-checkmark {
+    transition: all 2s;
+    color: #0C0;
+    color: #0C0;
 }
-.tl-checkmark:after, .tl-checkmark:before {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+.checked.tl-checkmark:before {
+    width: 12px;
+    left: 40%;
+    top: 70%;
+    -webkit-transform: translate(-30%,-50%);
+    -ms-transform: translate(-30%,-50%);
+    transform: translate(-30%,-50%);
 }
+.checked.tl-checkmark:after {
+    height: 20px;
+    left: 70%;
+    top: 40%;
+}
+

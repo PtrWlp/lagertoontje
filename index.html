@@ -18,12 +18,20 @@
 
     <hr>
     <i class="icono-cross"></i>
-    <i class="tl-checkmark"></i>
+    <i id="test" class="tl-checkmark"></i>
     <i class="tl-checkmark checked"></i>
     <hr>
 
-    <script src="./src/assets/jquery.min.js"></script>
-    <script src="./src/js/lagertoontje.js"></script>
+    <a href='#'>groen</a>
+    <script type="text/javascript">
+
+document.querySelector('a').addEventListener('click', function (event) {
+    document.getElementById('test').className += ' checked';
+});
+
+    </script>
+
+    <script src="./assets/jquery.min.js"></script>
 
 
 </body></html>
