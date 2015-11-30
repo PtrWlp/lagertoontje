@@ -39,13 +39,13 @@ hr.tl-headline {
   border-top: 1px solid black;
 }
 
-#tl-accordion > h2, 
+#tl-accordion > h2,
 #tl-accordion > div {
   border-style: solid;
   border-color: black;
-  border-left: 1px; 
-  border-right: 1px; 
-  border-bottom: 1px; 
+  border-left: 1px;
+  border-right: 1px;
+  border-bottom: 1px;
   padding: 5px;
 }
 
@@ -201,4 +201,99 @@ hr.tl-headline {
 }
 .tl-footer p:last-child {
   margin-bottom: 0;
+}
+
+
+[class*=icono-], [class*=icono-] * {
+    box-sizing: border-box;
+}
+[class*=icono-] {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    color: #F00;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+}
+.icono-cross, .icono-crossCircle {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+[class*=icono-cross], [class*=icono-plus] {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+[class*=icono-]:after, [class*=icono-]:before {
+    content: '';
+    pointer-events: none;
+}
+[class*=icono-check]:before, [class*=icono-cross]:before, [class*=icono-plus]:before {
+    width: 20px;
+    height: 2px;
+}
+[class*=icono-cross]:after, [class*=icono-plus]:after {
+    height: 20px;
+    width: 2px;
+}
+[class*=icono-check]:before, [class*=icono-cross]:after, [class*=icono-cross]:before {
+    box-shadow: inset 0 0 0 32px;
+}
+[class*=icono-check]:before, [class*=icono-cross]:after, [class*=icono-cross]:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+.tl-checkmark, .tl-checkmark * {
+    box-sizing: border-box;
+}
+.tl-checkmark {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    color: #F00;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.tl-checkmark:after, .tl-checkmark:before {
+    content: '';
+    pointer-events: none;
+}
+
+.tl-checkmark:before {
+    width: 20px;
+    height: 2px;
+}
+.tl-checkmark:after {
+    height: 20px;
+    width: 2px;
+}
+.tl-checkmark:after, .tl-checkmark:before {
+    box-shadow: inset 0 0 0 32px;
+}
+.tl-checkmark:after, .tl-checkmark:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
