@@ -32,13 +32,14 @@ $('.tl-factor button').on("click", function () {
 	} else {
 		Cookies.remove(cookiename);	
 	}
+	setFactorVote($('.tl-factor .tl-checkmark'));
+	
 });
 
 
 // Set voting when you encounter one
-function setFactorVote(el) {
-	var $el=$(el);
-	var factor = $el.data('factor');
+function setFactorVote($el) {
+	var factor = $el.attr('id');
 	if (Cookies.get('tl-' + factor)) {
 		$el.addClass('checked');
 	} else {
