@@ -5,5 +5,8 @@
     "grunt-contrib-copy": "~0.6.0",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-watch": "~0.6.1"
+  },
+  "devDependencies": {
+    "grunt-serve": "^0.1.6"
   }
 }

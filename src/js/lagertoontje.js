@@ -24,27 +24,32 @@ $('#tl-accordion > h2').click(function() {
 	return false;
 });
 
-// Handle voting buttons
+// Handle voting buttons. set cookie if disagree
 $('.tl-factor button').on("click", function () {
 	var cookiename = 'tl-' + $(this).data('factor');
 	if ($(this).data('agree')) {
-		Cookies.set(cookiename, true);
-	} else {
 		Cookies.remove(cookiename);	
+	} else {
+		Cookies.set(cookiename, true);
 	}
 	setFactorVote($('.tl-factor .tl-checkmark'));
 	
 });
 
 
-// Set voting when you encounter one
+// Set voting when you encounter one. set unchecked when disagree
 function setFactorVote($el) {
 	var factor = $el.attr('id');
 	if (Cookies.get('tl-' + factor)) {
-		$el.addClass('checked');
-	} else {
 		$el.removeClass('checked');
+	} else {
+		$el.addClass('checked');
 	}
 }
 
-
+// Set all factor checkmarks
+$( document ).ready(function() {
+ 	$('.tl-checkmark').each(function( index ) {
+		setFactorVote($(this));
+	})
+})

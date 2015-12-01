@@ -96,6 +96,12 @@ module.exports = function(grunt) {
                 dest : 'target/js'
             }
         }, 
+        serve: {
+            path: '/target', 
+            options: {
+                port: 80
+            }
+        },
 		watch: {
 			options: {
 				livereload: false,
@@ -123,6 +129,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-serve');
 
     grunt.registerTask('default', ['clean', 'assemble', 'copy']);
     grunt.registerTask('update', ['clean', 'assemble', 'copy', 'watch']);
