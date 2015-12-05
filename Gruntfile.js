@@ -28,6 +28,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/pers.html'
             },
+            links: {
+                options: {
+                  layout: "src/layouts/links.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/links.html'
+            },
             articles: {
                 options: {
                   layout: "src/layouts/article.hbs"
@@ -95,9 +102,9 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'target/js'
             }
-        }, 
+        },
         serve: {
-            path: '/target', 
+            path: '/target',
             options: {
                 port: 80
             }
