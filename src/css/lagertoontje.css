@@ -33,8 +33,14 @@ blockquote {
 
 .tl-navheader {
   color: #cdddeb;
-  padding: 5px 0 5px 10px;
+  padding: 5px 0 5px 0;
   font-size: 16px;
+}
+
+.tl-navheader img {
+  padding-right: 10px;
+  height: 45px;
+  width: auto;
 }
 
 hr.tl-headline {
@@ -169,6 +175,10 @@ hr.tl-headline {
   margin-bottom: 0;
 }
 
+
+.tl-underconstruction {
+  color: red;
+}
 
 /*
  * Blog posts
