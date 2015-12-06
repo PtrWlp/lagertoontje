@@ -1,6 +1,6 @@
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;;
   color: #444;
 }
 
@@ -11,7 +11,6 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
 }
@@ -23,6 +22,18 @@ legend {
 
 blockquote {
   font-size: 15px;
+}
+
+.tl-main {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.tl-strong {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .tl-main img:focus {
@@ -149,15 +160,18 @@ hr.tl-headline {
   color: #999;
 }
 
+.tl-quote {
+  font-style: italic;
+}
+
+.tl-imageright {
+    float: right;
+    margin: 0 0 10px 10px;
+}
 
 /*
  * Main column and sidebar layout
  */
-
-.tl-main {
-  font-size: 14px;
-  line-height: 1.5;
-}
 
 /* Sidebar modules for boxing content */
 .sidebar-module {
