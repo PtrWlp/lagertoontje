@@ -21,6 +21,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/about.html'
             },
+            carbid: {
+                options: {
+                  layout: "src/layouts/carbid.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/carbid.html'
+            },
             pers: {
                 options: {
                   layout: "src/layouts/pers.hbs"
@@ -106,7 +113,7 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-                    livereload: true,
+                    livereload: false,
                     base: 'target', 
                     port: 80
                 }
@@ -114,7 +121,7 @@ module.exports = function(grunt) {
         },
 		watch: {
 			options: {
-				livereload: true,
+				livereload: false,
 			},
 			css: {
 				files: ['src/css/*.css'],
