@@ -85,11 +85,11 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'target/fonts'
             },
-            audio: {
+            media: {
                 expand : true,
-                cwd : 'src/audio',
+                cwd : 'src/media',
                 src : '**',
-                dest : 'target/audio'
+                dest : 'target/media'
             },
             img: {
                 expand : true,
