@@ -1,0 +1,27 @@
+---
+title: praat
+---
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    {{> head}}
+</head>
+
+  <body class="tl-body">
+    {{> menu this}}
+
+<iframe id="wordpressiframe" width="100%" src="https://lagertoontje.wordpress.com/2015/11/19/first-blog-post" frameborder="0"></iframe>
+
+
+{{> footer}}
+
+
+<script>
+	var $iframe = $('#wordpressiframe');
+	var footerHeight = $('footer').height();
+	$iframe.height($( document ).height() - footerHeight - $iframe.offset().top - 50);
+
+</script>
+
+</body></html>
