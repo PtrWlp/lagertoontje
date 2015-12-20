@@ -28,6 +28,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/carbid.html'
             },
+            praat: {
+                options: {
+                  layout: "src/layouts/praat.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/praat.html'
+            },
             pers: {
                 options: {
                   layout: "src/layouts/pers.hbs"

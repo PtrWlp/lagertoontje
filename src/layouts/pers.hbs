@@ -11,13 +11,18 @@ title: pers
   <body class="tl-body">
     {{> menu this}}
 
-<iframe id="wordpressiframe" width="100%" src="http://lagertoontje.wordpress.com" frameborder="0" allowfullscreen></iframe>
+<iframe id="wordpressiframe" width="100%" src="http://lagertoontje.wordpress.com" frameborder="0"></iframe>
 
-<script>
-
-</script>
 
 
 {{> footer}}
+
+
+<script>
+	var $iframe = $('#wordpressiframe');
+	var footerHeight = $('footer').height();
+	$iframe.height($( document ).height() - footerHeight - $iframe.offset().top - 50);
+
+</script>
 
 </body></html>

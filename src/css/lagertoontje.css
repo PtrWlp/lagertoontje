@@ -108,7 +108,9 @@ hr.tl-headline {
   transition: 0.5s ease-in-out;
 }
 
-
+.gsc-control-cse {
+  padding: 0 !important;
+}
 
 
 @media (min-width: 1200px) {
