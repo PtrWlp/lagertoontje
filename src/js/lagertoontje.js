@@ -29,8 +29,12 @@ $('.tl-factor button').on("click", function () {
 	var cookiename = 'tl-' + $(this).data('factor');
 	if ($(this).data('agree')) {
 		Cookies.remove(cookiename);	
+		//ga('send', 'event', 'button', 'click', 'agree');
+
 	} else {
 		Cookies.set(cookiename, true);
+		//ga('send', 'event', 'button', 'click', 'disagree');
+
 	}
 	setFactorVote($('.tl-factor .tl-checkmark'));
 	
@@ -52,4 +56,7 @@ $( document ).ready(function() {
  	$('.tl-checkmark').each(function( index ) {
 		setFactorVote($(this));
 	})
+
+
 })
+
