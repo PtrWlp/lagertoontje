@@ -90,7 +90,7 @@ hr.tl-headline {
   padding-left: 20px;
 }
 
-#tl-accordion > h2::before {
+/*#tl-accordion > h2::before {
   border-style: solid;
   border-width: 4px 4px 0 0;
   content: '';
@@ -107,7 +107,7 @@ hr.tl-headline {
   transform: rotate(135deg);
   transition: 0.5s ease-in-out;
 }
-
+*/
 .gsc-control-cse {
   padding: 0 !important;
 }
@@ -315,3 +315,66 @@ hr.tl-headline {
     top: 40%;
 }
 
+
+span.poundingvolume {
+    color: black;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+    margin: 4px 20px 4px 5px;
+
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-left: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    padding: 6px 3px;
+    box-shadow: inset 6px 0;
+
+}
+
+.tl-open span.poundingvolume:before, 
+.tl-open span.poundingvolume:after, 
+#tl-accordion > h2:hover .poundingvolume:before, 
+#tl-accordion > h2:hover .poundingvolume:after {
+    content: '';
+    pointer-events: none;
+    border-width: 2px;
+    left: -2px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pound 1s infinite;
+}
+
+.tl-open span.poundingvolume:after, 
+#tl-accordion > h2:hover .poundingvolume:after {
+    border-style: solid;
+}
+
+.tl-open span.poundingvolume:before, 
+#tl-accordion > h2:hover .poundingvolume:before {
+    border-style: double;
+    animation: pound 1s infinite;
+    -webkit-animation-delay: .4s; /* Chrome, Safari, Opera */
+    animation-delay: .4s;
+}
+
+@keyframes pound {
+    from { border-width: 2px; left: 0; height: 15px; border-right-color: transparent; }
+    20% { border-right-color: black; }
+    98% { border-right-color: transparent; }
+    to { border-width: 4px; left: 11px; height: 25px; border-right-color: transparent; }
+}
