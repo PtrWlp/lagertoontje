@@ -13,8 +13,20 @@ $('#tl-accordion > h2').click(function() {
 		$allPanels.slideUp();
 		$allSections.removeClass('tl-open');
 		location.hash = $this.attr('id') + '-section';
-		$this.next().slideDown();
 		$this.addClass('tl-open');
+		$this[0].scrollIntoView();
+
+
+		$this.next().slideDown( 500, function() {
+    		// Animation complete, scroll into view
+			var offset = $(this).offset();
+			$('html, body').animate({
+			    scrollTop: offset.top - 80, 
+			    scrollLeft: 0
+			});
+  		});
+
+
 	} else {
 		$this.removeClass('tl-open');
 		$this.next().slideUp();
