@@ -25,7 +25,7 @@ $('#tl-accordion > h2').click(function() {
 			    scrollLeft: 0
 			});
   		});
-
+		ga('send', 'event', 'link', 'open ' + $this.attr('id'));
 
 	} else {
 		$this.removeClass('tl-open');
@@ -41,11 +41,11 @@ $('.tl-factor button').on("click", function () {
 	var cookiename = 'tl-' + $(this).data('factor');
 	if ($(this).data('agree')) {
 		Cookies.remove(cookiename);	
-		//ga('send', 'event', 'button', 'click', 'agree');
+		ga('send', 'event', 'disagree', cookiename);
 
 	} else {
 		Cookies.set(cookiename, true);
-		//ga('send', 'event', 'button', 'click', 'disagree');
+		ga('send', 'event', 'agree', cookiename);
 
 	}
 	setFactorVote($('.tl-factor .tl-checkmark'));
