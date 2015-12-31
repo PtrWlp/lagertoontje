@@ -21,14 +21,7 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/about.html'
             },
-            carbid: {
-                options: {
-                  layout: "src/layouts/carbid.hbs"
-                },
-                src: ['src/partials/main.hbs'],
-                dest: 'target/carbid.html'
-            },
-            praat: {
+           praat: {
                 options: {
                   layout: "src/layouts/praat.hbs"
                 },
