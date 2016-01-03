@@ -315,6 +315,14 @@ hr.tl-headline {
     top: 40%;
 }
 
+span.tl-icon {
+    line-height: 100%;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    display: block;
+    float: left;
+}
 
 span.poundingvolume {
     color: black;
