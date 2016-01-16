@@ -109,6 +109,14 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'target/js'
             }
+            // ,
+            // carbid: {
+            //     options: {
+            //        layout: "src/layouts/carbid.hbs"
+            //     },
+            //     src: ['src/partials/main.hbs'],
+            //     dest: 'target/carbid.html'
+            // }
         },
         connect: {
             server: {
