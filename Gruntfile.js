@@ -86,6 +86,12 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'target/assets'
             },
+            zaak: {
+                expand : true,
+                cwd : 'zaak',
+                src : '**',
+                dest : 'target/zaak'
+            },
             font: {
                 expand : true,
                 cwd : 'src/fonts',
