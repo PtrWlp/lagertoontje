@@ -112,6 +112,12 @@ hr.tl-headline {
   padding: 0 !important;
 }
 
+.evidenticon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+  float: left;
+}
 
 @media (min-width: 1200px) {
   .container {

@@ -21,12 +21,12 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/about.html'
             },
-           praat: {
+           petitie: {
                 options: {
-                  layout: "src/layouts/praat.hbs"
+                  layout: "src/layouts/petitie.hbs"
                 },
                 src: ['src/partials/main.hbs'],
-                dest: 'target/praat.html'
+                dest: 'target/petitie.html'
             },
             pers: {
                 options: {
