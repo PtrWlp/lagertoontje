@@ -125,6 +125,12 @@ hr.tl-headline {
   }
 }
 
+@media (min-width: 770px) {
+  .mobileonly {
+    display: none;
+  }
+}
+
 
 .tl-masthead {
   background-color: #3b5998;
