@@ -49,6 +49,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/ReactiesPetitieNDSM.html'
             },
+            twitter: {
+                options: {
+                  layout: "src/layouts/twitter2016.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/twitter2016.html'
+            },
             articles: {
                 options: {
                   layout: "src/layouts/article.hbs"
