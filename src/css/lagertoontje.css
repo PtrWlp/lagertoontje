@@ -204,7 +204,7 @@ hr.tl-headline {
 /* Sidebar modules for boxing content */
 .sidebar-module {
   padding: 15px;
-  margin: 0 -15px 15px;
+  margin: 0 -15px 0;
 }
 .sidebar-module li {
   margin-bottom: 6px;
@@ -263,7 +263,7 @@ a.tl-petitie:focus, a.tl-petitie:hover {
 }
 
 .tl-sidebar h4 {
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
 /*
