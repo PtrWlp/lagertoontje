@@ -28,6 +28,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/petitie.html'
             },
+           naslag: {
+                options: {
+                  layout: "src/layouts/naslag.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/naslag.html'
+            },
             pers: {
                 options: {
                   layout: "src/layouts/pers.hbs"
