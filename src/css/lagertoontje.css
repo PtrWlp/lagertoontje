@@ -419,6 +419,14 @@ span.poundingvolume {
     animation-delay: .4s;
 }
 
+.tl-naslag-row {
+  border-bottom: dotted 1px lightgrey;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  margin-top: 8px;
+}
+
+
 @keyframes pound {
     from { border-width: 2px; left: 0; height: 15px; border-right-color: transparent; }
     20% { border-right-color: black; }
