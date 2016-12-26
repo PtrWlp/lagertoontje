@@ -88,6 +88,7 @@ hr.tl-headline {
   line-height: 2;
   background-color: #ddd;
   padding-left: 5px;
+  cursor: pointer;
 }
 
 /*#tl-accordion > h2::before {
