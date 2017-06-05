@@ -21,6 +21,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/about.html'
             },
+            bezwaar: {
+                options: {
+                  layout: "src/layouts/bezwaar.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/bezwaar/index.html'
+            },
            petitie: {
                 options: {
                   layout: "src/layouts/petitie.hbs"
@@ -150,8 +157,8 @@ module.exports = function(grunt) {
                 options: {
                     livereload: false,
                     base: 'target', 
-                    port: 8080,
-                    open: 'http://localhost:8080/index.html',
+                    port: 8085,
+                    open: 'http://localhost:8085/index.html',
                     middleware: function (connect, options) {
 
                         // bug in connect 0.7+ , https://github.com/drewzboto/grunt-connect-proxy/issues/65
@@ -204,7 +211,7 @@ module.exports = function(grunt) {
 			}
 		}
     });
-    grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-assemble');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
