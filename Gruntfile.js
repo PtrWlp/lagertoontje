@@ -28,6 +28,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/bezwaar/index.html'
             },
+            amsterdamsbeleid: {
+                options: {
+                  layout: "src/layouts/amsterdamsbeleid.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/amsterdamsbeleid/index.html'
+            },
            petitie: {
                 options: {
                   layout: "src/layouts/petitie.hbs"
@@ -136,6 +143,12 @@ module.exports = function(grunt) {
                 cwd : 'src/docs',
                 src : '**',
                 dest : 'target/docs'
+            },
+            docsamsterdam: {
+                expand : true,
+                cwd : 'src/docsamsterdam',
+                src : '**',
+                dest : 'target/docsamsterdam'
             },
             js: {
                 expand : true,
