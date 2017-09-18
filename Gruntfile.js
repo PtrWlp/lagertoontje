@@ -150,6 +150,12 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'target/docsamsterdam'
             },
+            zienswijzen: {
+                expand : true,
+                cwd : 'src/zienswijzen',
+                src : '**',
+                dest : 'target/zienswijzen'
+            },
             js: {
                 expand : true,
                 cwd : 'src/js',
