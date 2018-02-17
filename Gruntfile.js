@@ -35,6 +35,13 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/amsterdamsbeleid/index.html'
             },
+            meteo: {
+                options: {
+                  layout: "src/layouts/meteo.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/meteo/index.html'
+            },
            petitie: {
                 options: {
                   layout: "src/layouts/petitie.hbs"
@@ -150,6 +157,19 @@ module.exports = function(grunt) {
                 src : '**',
                 dest : 'target/docsamsterdam'
             },
+            docsMeteo: {
+                expand : true,
+                cwd : 'src/docs',
+                src : 'motiemeteocorrectie.pdf',
+                dest : 'target/meteo'
+            },
+            docsMeteo2: {
+                expand : true,
+                cwd : 'src/docs',
+                src : 'meteo-geluid_en_wind_erik_salomons.pdf',
+                dest : 'target/meteo'
+            },
+            
             zienswijzen: {
                 expand : true,
                 cwd : 'src/zienswijzen',
