@@ -420,6 +420,29 @@ span.poundingvolume {
     animation-delay: .4s;
 }
 
+span.speaker {
+  color: black;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-style: normal;
+  text-align: left;
+  text-indent: -9999px;
+  direction: ltr;
+  margin: 4px 5px;
+
+  width: 0;
+  height: 0;
+  border: 5px solid;
+  border-left: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  padding: 6px 3px;
+  box-shadow: inset 6px 0;
+
+}
+
 .tl-naslag-row {
   border-bottom: dotted 1px lightgrey;
   margin-bottom: 8px;
