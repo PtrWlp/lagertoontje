@@ -243,23 +243,7 @@ hr.tl-headline {
   color: #999;
 }
 
-.tl-petitie {
-  background: #EA1212;
-  border-radius: 4px;
-  padding: 4px 6px;
-  color: white;
-  top: 8px;
-  position: relative;
-  font-size: 12px;
-}
-
-a.tl-petitie:focus, a.tl-petitie:hover {
-  color: white;
-  text-decoration: none;
-   background: #DA1010;
-}
-
-.tl-footer .tl-petitie {
+.tl-footer {
   position: initial;
 }
 
@@ -292,11 +276,13 @@ a.tl-petitie:focus, a.tl-petitie:hover {
   border-radius: 5px;
 }
 
-.factors li:before {
-  content: '\2b05';
-  font-size: 14px;
-  margin: 0 1em;  
-  color: #F00;
+
+.factors li {
+    background: url('arrowleft.png') no-repeat left;
+    height: 26px;
+    padding-left: 30px;
+    padding-top: 3px;
+    background-size: 20px;
 }
 
 span.tl-icon {
