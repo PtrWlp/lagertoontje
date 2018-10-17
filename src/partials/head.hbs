@@ -25,6 +25,14 @@
 <!-- Add lightbox -->
 <link rel="stylesheet" href="./assets/magnific-popup.css">
 
+<script>
+  // Reroute to https:
+  if (window.location.href.match('http:') && 
+      window.location.href.indexOf('localhost') === -1 ) {
+    window.location.href = window.location.href.replace('http', 'https');
+  }
+</script>
+
 
 <!-- Custom styles for this template -->
 <link href="./css/lagertoontje.css" rel="stylesheet">
