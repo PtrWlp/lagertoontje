@@ -279,10 +279,15 @@ hr.tl-headline {
 
 .factors li {
     background: url('arrowleft.png') no-repeat left;
-    height: 26px;
     padding-left: 30px;
     padding-top: 3px;
     background-size: 20px;
+}
+
+@media (min-width: 500px) {
+  .factors li  {
+    height: 26px;
+  }
 }
 
 span.tl-icon {
