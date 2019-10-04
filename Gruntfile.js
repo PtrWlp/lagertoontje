@@ -42,12 +42,19 @@ module.exports = function(grunt) {
                 src: ['src/partials/main.hbs'],
                 dest: 'target/meteo/index.html'
             },
-           petitie: {
+           demping: {
                 options: {
-                  layout: "src/layouts/petitie.hbs"
+                  layout: "src/layouts/demping.hbs"
                 },
                 src: ['src/partials/main.hbs'],
-                dest: 'target/petitie.html'
+                dest: 'target/demping.html'
+            },
+            duldbaar: {
+                options: {
+                  layout: "src/layouts/duldbaar.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/duldbaar.html'
             },
            naslag: {
                 options: {
@@ -55,6 +62,13 @@ module.exports = function(grunt) {
                 },
                 src: ['src/partials/main.hbs'],
                 dest: 'target/naslag.html'
+            },
+            artikelen: {
+                options: {
+                  layout: "src/layouts/artikelen.hbs"
+                },
+                src: ['src/partials/main.hbs'],
+                dest: 'target/artikelen.html'
             },
             pers: {
                 options: {
